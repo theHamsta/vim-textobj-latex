@@ -9,38 +9,10 @@ endif
 
 call textobj#user#plugin('latex', {
 \   'environment': {
-\     '*pattern*': ['\\begin{[^}]\+}.*\n\s*', '\n^\s*\\end{[^}]\+}.*$'],
-\     'select-a': 'ae',
-\     'select-i': 'ie',
-\   },
-\  'bracket-math': {
-\     '*pattern*': ['\\\[', '\\\]'],
-\     'select-a': 'ab',
-\     'select-i': 'ib',
-\   },
-\  'paren-math': {
-\     '*pattern*': ['\\(', '\\)'],
-\     'select-a': 'a\',
-\     'select-i': 'i\',
-\   },
-\  'dollar-math-a': {
-\     '*pattern*': '[$][^$]*[$]',
-\     'select': 'a$',
-\   },
-\  'dollar-math-i': {
-\     '*pattern*': '[$]\zs[^$]*\ze[$]',
-\     'select': 'i$',
-\   },
-\  'quote': {
-\     '*pattern*': ['`', "'"],
-\     'select-a': 'aq',
-\     'select-i': 'iq',
-\   },
-\  'double-quote': {
-\     '*pattern*': ['``', "''"],
-\     'select-a': 'aQ',
-\     'select-i': 'iQ',
-\   },
+\     '*pattern*': ['\\begin{frame}.*\n\s*', '\n^\s*\\end{frame}'],
+\     'select-a': 'al',
+\     'select-i': 'il',
+\   }
 \ })
 
 let g:loaded_textobj_latex = 1
